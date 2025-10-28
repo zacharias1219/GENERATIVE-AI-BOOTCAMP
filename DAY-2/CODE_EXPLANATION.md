@@ -3,10 +3,10 @@
 ## How to Run This App! 🚀
 
 ### Step 1: Install the Tools
-Open your terminal and type these commands one by one:
+Open your terminal and type this command:
 
 ```bash
-pip install streamlit google-generativeai pillow
+pip install -r requirements.txt
 ```
 
 **What this does:** Downloads all the tools we need to make the app work!
