@@ -1,5 +1,37 @@
 # 🤖 How Our AI Text Generator Works (For Kids!)
 
+## How to Run This App! 🚀
+
+### Step 1: Install the Tools
+Open your terminal and type these commands one by one:
+
+```bash
+pip install streamlit google-generativeai
+```
+
+**What this does:** Downloads all the tools we need to make the app work!
+
+### Step 2: Go to the Right Folder
+```bash
+cd DAY-1/
+```
+
+**What this does:** Moves you to the folder where our app lives!
+
+### Step 3: Run the App
+```bash
+streamlit run main.py
+```
+
+**What this does:** Starts the app and opens it in your web browser!
+
+### Step 4: Use the App
+1. Type something in the text box
+2. Click "Generate"
+3. See what the AI writes!
+
+---
+
 ## What Does This App Do?
 
 Imagine you have a magic robot friend who can write stories, poems, or answer questions! That's what our app does. You type something, and the robot writes back to you.
