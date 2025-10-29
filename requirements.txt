@@ -1,3 +1,15 @@
+# Day 1: Text Generation with Gemini
 streamlit
 google-generativeai
+
+# Day 2: Image Analysis with Gemini Vision
 Pillow
+
+# Day 3: Multi-Agent AI with CrewAI and Groq
+crewai
+python-dotenv
+
+# Optional: Additional tools for Day 3 extensions
+# langchain>=0.2.14
+# langchain-community>=0.2.10
+# duckduckgo-search>=6.1.5
