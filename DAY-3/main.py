@@ -1,6 +1,7 @@
 import streamlit as st
 from crewai import Agent, Task, Crew, Process
 import os
+from dotenv import load_dotenv
 
 # Page config
 st.set_page_config(page_title="Simple CrewAI Demo", page_icon="🤖", layout="wide")
@@ -9,11 +10,11 @@ st.set_page_config(page_title="Simple CrewAI Demo", page_icon="🤖", layout="wi
 st.title("🤖 Simple Multi-Agent AI Demo")
 st.markdown("**Three AI agents work together to create an article!**")
 
-# API Key (hardcoded for demo - NOT secure for production!)
-GROQ_API_KEY = "YOUR_GROQ_API_KEY"
-
-# Set environment variable for LiteLLM
-os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+# Load env and set key for LiteLLM
+load_dotenv()
+groq_key = os.getenv("GROQ_API_KEY", "")
+if groq_key:
+    os.environ["GROQ_API_KEY"] = groq_key
 
 # Topic input
 st.header("📝 What should the agents write about?")

@@ -8,6 +8,9 @@ Pillow
 # Day 3: Multi-Agent AI with CrewAI and Groq
 crewai
 python-dotenv
+litellm
+groq
+
 
 # Optional: Additional tools for Day 3 extensions
 # langchain>=0.2.14

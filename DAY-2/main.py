@@ -1,13 +1,16 @@
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
+import os
+from dotenv import load_dotenv
 
 # Configure API
-genai.configure(api_key="YOUR_API_KEY")
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # System prompt for image analysis
 system_prompt = "You are a helpful AI assistant that analyzes images. You provide clear, detailed, and accurate descriptions of what you see in images. Be specific about objects, people, settings, colors, and activities. Always be friendly and helpful in your descriptions."
-model = genai.GenerativeModel("gemini-2.5-flash")
+model = genai.GenerativeModel(os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash"))
 
 # App Title
 st.title("🖼️ AI Image Caption Generator")

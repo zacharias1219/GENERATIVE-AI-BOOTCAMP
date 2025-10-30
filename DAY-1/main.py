@@ -1,12 +1,15 @@
 import streamlit as st
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 
 # --- Configure API key ---
-genai.configure(api_key="YOUR_KEY")
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # --- Initialize model with fixed system prompt ---
 system_prompt = "You are a helpful, creative, and knowledgeable AI assistant. You provide accurate, engaging, and well-structured responses. Always be polite and professional."
-model = genai.GenerativeModel("gemini-2.5-flash")
+model = genai.GenerativeModel(os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash"))
 
 st.title("🎨 Creative Text Generator")
 
